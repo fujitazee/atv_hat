@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name atv_cluster_hat)(type Legacy)(uri ${KIPRJMOD}/atv_cluster_hat.lib)(options "")(descr ""))
+)
