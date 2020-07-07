@@ -1,5 +1,9 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP PCA9552PW,118
+F https://www.nxp.com/docs/en/data-sheet/PCA9552.pdf
+$ENDCMP
+#
 $CMP conn_01x02_labeled
 D Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)
 K connector
@@ -10,6 +14,12 @@ $CMP enc28j60_hanrun
 D Generic connector, double row, 02x06, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)
 K connector
 F ~
+$ENDCMP
+#
+$CMP phoenix_1935161
+D wire to board connector
+K connector
+F https://media.digikey.com/pdf/Data%20Sheets/Phoenix%20Contact%20PDFs/1935161.pdf
 $ENDCMP
 #
 #End Doc Library
