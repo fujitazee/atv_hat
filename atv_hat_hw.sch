@@ -181,10 +181,6 @@ Wire Wire Line
 	8500 1500 8850 1500
 Wire Wire Line
 	8850 1400 8850 1500
-Text Label 6750 1600 0    50   ~ 0
-SDA
-Text Label 6750 1700 0    50   ~ 0
-SCL
 Text Label 6750 1800 0    50   ~ 0
 GPIO4_GPIO_GCLK
 Text Label 6750 2000 0    50   ~ 0
@@ -234,14 +230,12 @@ Wire Wire Line
 	8200 2700 9250 2700
 Text Label 8550 2800 0    50   ~ 0
 ID_SC
-Text Label 8550 3000 0    50   ~ 0
-GPIO12
+Text Label 9830 2170 3    50   ~ 0
+bank_0_led
 Text Label 8550 3200 0    50   ~ 0
 GPIO16
 Text Label 8550 3300 0    50   ~ 0
 GPIO20
-Text Label 8550 3400 0    50   ~ 0
-GPIO21
 Wire Wire Line
 	8200 1800 9250 1800
 Wire Wire Line
@@ -272,28 +266,6 @@ F 1 "MountingHole" H 10250 905 50  0000 L CNN
 F 2 "lib:MountingHole_2.7mm_M2.5_uHAT_RPi" H 10150 950 50  0001 C CNN
 F 3 "~" H 10150 950 50  0001 C CNN
 	1    10150 950 
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H3
-U 1 1 5C7C8014
-P 10150 1150
-F 0 "H3" H 10250 1196 50  0000 L CNN
-F 1 "MountingHole" H 10250 1105 50  0000 L CNN
-F 2 "lib:MountingHole_2.7mm_M2.5_uHAT_RPi" H 10150 1150 50  0001 C CNN
-F 3 "~" H 10150 1150 50  0001 C CNN
-	1    10150 1150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H4
-U 1 1 5C7C8030
-P 10150 1350
-F 0 "H4" H 10250 1396 50  0000 L CNN
-F 1 "MountingHole" H 10250 1305 50  0000 L CNN
-F 2 "lib:MountingHole_2.7mm_M2.5_uHAT_RPi" H 10150 1350 50  0001 C CNN
-F 3 "~" H 10150 1350 50  0001 C CNN
-	1    10150 1350
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -427,16 +399,6 @@ Wire Wire Line
 Connection ~ 1650 1650
 Wire Wire Line
 	1650 1650 1650 1750
-Wire Wire Line
-	6750 2400 7700 2400
-Wire Wire Line
-	6750 2500 7700 2500
-Wire Wire Line
-	6750 2600 7700 2600
-Wire Wire Line
-	8550 2500 8200 2500
-Wire Wire Line
-	8550 2600 8200 2600
 $Comp
 L Device:R R64
 U 1 1 5F048AA4
@@ -484,12 +446,6 @@ Wire Wire Line
 Wire Wire Line
 	7700 1800 6750 1800
 Wire Wire Line
-	7700 2000 6750 2000
-Wire Wire Line
-	7700 2100 6750 2100
-Wire Wire Line
-	7700 2200 6750 2200
-Wire Wire Line
 	7700 2900 6750 2900
 Wire Wire Line
 	6750 3000 7700 3000
@@ -499,174 +455,12 @@ Wire Wire Line
 	6750 3200 7700 3200
 Wire Wire Line
 	7700 3300 6750 3300
-$Comp
-L Device:LED D?
-U 1 1 5F09E9D9
-P 9650 3000
-AR Path="/5F028404/5F09E9D9" Ref="D?"  Part="1" 
-AR Path="/5F09E9D9" Ref="D3"  Part="1" 
-F 0 "D3" H 9750 2975 50  0000 C CNN
-F 1 "Green" H 9825 3050 50  0000 C CNN
-F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 9650 3000 50  0001 C CNN
-F 3 "~" H 9650 3000 50  0001 C CNN
-F 4 "732-4990-1-ND" H 9650 3000 50  0001 C CNN "DPN"
-	1    9650 3000
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	9400 3000 9500 3000
-$Comp
-L Device:R R?
-U 1 1 5F09E9E1
-P 9250 3000
-AR Path="/5F028404/5F09E9E1" Ref="R?"  Part="1" 
-AR Path="/5F09E9E1" Ref="R67"  Part="1" 
-F 0 "R67" V 9300 3150 50  0000 C CNN
-F 1 "220" V 9250 3000 50  0000 C CNN
-F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 9180 3000 50  0001 C CNN
-F 3 "~" H 9250 3000 50  0001 C CNN
-F 4 "P220ECT-ND" V 9250 3000 50  0001 C CNN "DPN"
-	1    9250 3000
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:LED D?
-U 1 1 5F0A172E
-P 9650 3200
-AR Path="/5F028404/5F0A172E" Ref="D?"  Part="1" 
-AR Path="/5F0A172E" Ref="D4"  Part="1" 
-F 0 "D4" H 9750 3175 50  0000 C CNN
-F 1 "Green" H 9825 3250 50  0000 C CNN
-F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 9650 3200 50  0001 C CNN
-F 3 "~" H 9650 3200 50  0001 C CNN
-F 4 "732-4990-1-ND" H 9650 3200 50  0001 C CNN "DPN"
-	1    9650 3200
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	9400 3200 9500 3200
-$Comp
-L Device:R R?
-U 1 1 5F0A1736
-P 9250 3200
-AR Path="/5F028404/5F0A1736" Ref="R?"  Part="1" 
-AR Path="/5F0A1736" Ref="R68"  Part="1" 
-F 0 "R68" V 9300 3350 50  0000 C CNN
-F 1 "220" V 9250 3200 50  0000 C CNN
-F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 9180 3200 50  0001 C CNN
-F 3 "~" H 9250 3200 50  0001 C CNN
-F 4 "P220ECT-ND" V 9250 3200 50  0001 C CNN "DPN"
-	1    9250 3200
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:LED D?
-U 1 1 5F0A41D6
-P 9650 3350
-AR Path="/5F028404/5F0A41D6" Ref="D?"  Part="1" 
-AR Path="/5F0A41D6" Ref="D5"  Part="1" 
-F 0 "D5" H 9750 3325 50  0000 C CNN
-F 1 "Green" H 9825 3400 50  0000 C CNN
-F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 9650 3350 50  0001 C CNN
-F 3 "~" H 9650 3350 50  0001 C CNN
-F 4 "732-4990-1-ND" H 9650 3350 50  0001 C CNN "DPN"
-	1    9650 3350
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	9400 3350 9500 3350
-$Comp
-L Device:R R?
-U 1 1 5F0A41DE
-P 9250 3350
-AR Path="/5F028404/5F0A41DE" Ref="R?"  Part="1" 
-AR Path="/5F0A41DE" Ref="R69"  Part="1" 
-F 0 "R69" V 9300 3500 50  0000 C CNN
-F 1 "220" V 9250 3350 50  0000 C CNN
-F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 9180 3350 50  0001 C CNN
-F 3 "~" H 9250 3350 50  0001 C CNN
-F 4 "P220ECT-ND" V 9250 3350 50  0001 C CNN "DPN"
-	1    9250 3350
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:LED D?
-U 1 1 5F0A71E0
-P 9650 3500
-AR Path="/5F028404/5F0A71E0" Ref="D?"  Part="1" 
-AR Path="/5F0A71E0" Ref="D6"  Part="1" 
-F 0 "D6" H 9750 3475 50  0000 C CNN
-F 1 "Green" H 9825 3550 50  0000 C CNN
-F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 9650 3500 50  0001 C CNN
-F 3 "~" H 9650 3500 50  0001 C CNN
-F 4 "732-4990-1-ND" H 9650 3500 50  0001 C CNN "DPN"
-	1    9650 3500
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	9400 3500 9500 3500
-$Comp
-L Device:R R?
-U 1 1 5F0A71E8
-P 9250 3500
-AR Path="/5F028404/5F0A71E8" Ref="R?"  Part="1" 
-AR Path="/5F0A71E8" Ref="R70"  Part="1" 
-F 0 "R70" V 9300 3650 50  0000 C CNN
-F 1 "220" V 9250 3500 50  0000 C CNN
-F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 9180 3500 50  0001 C CNN
-F 3 "~" H 9250 3500 50  0001 C CNN
-F 4 "P220ECT-ND" V 9250 3500 50  0001 C CNN "DPN"
-	1    9250 3500
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	8200 3000 9100 3000
 Wire Wire Line
 	8200 3200 9100 3200
 Wire Wire Line
-	8975 3300 8975 3350
-Wire Wire Line
-	8975 3350 9100 3350
-Wire Wire Line
 	8200 3300 8975 3300
 Wire Wire Line
-	9100 3500 8975 3500
-Wire Wire Line
-	8975 3500 8975 3400
-Wire Wire Line
 	8200 3400 8975 3400
-$Comp
-L power:GND #PWR0201
-U 1 1 5F0BB46B
-P 10050 3600
-F 0 "#PWR0201" H 10050 3350 50  0001 C CNN
-F 1 "GND" H 10055 3427 50  0001 C CNN
-F 2 "" H 10050 3600 50  0001 C CNN
-F 3 "" H 10050 3600 50  0001 C CNN
-	1    10050 3600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9800 3000 10050 3000
-Wire Wire Line
-	10050 3000 10050 3200
-Wire Wire Line
-	9800 3200 10050 3200
-Connection ~ 10050 3200
-Wire Wire Line
-	10050 3200 10050 3350
-Wire Wire Line
-	9800 3350 10050 3350
-Connection ~ 10050 3350
-Wire Wire Line
-	10050 3350 10050 3500
-Wire Wire Line
-	9800 3500 10050 3500
-Connection ~ 10050 3500
-Wire Wire Line
-	10050 3500 10050 3600
-Wire Wire Line
-	8200 2000 8550 2000
 $Comp
 L Device:R R66
 U 1 1 5F242181
@@ -700,11 +494,7 @@ $EndComp
 Wire Wire Line
 	6125 1700 6125 1475
 Wire Wire Line
-	6125 1700 7700 1700
-Wire Wire Line
 	6425 1600 6425 1475
-Wire Wire Line
-	6425 1600 7700 1600
 $Comp
 L power:+3.3V #PWR0195
 U 1 1 5F24BF13
@@ -733,4 +523,256 @@ U 5F208EA9
 F0 "ethernet" 50
 F1 "ethernet.sch" 50
 $EndSheet
+Text GLabel 9240 2600 2    20   Input ~ 0
+GPIO8_SPI_CE0_N
+Text GLabel 6715 2600 0    20   Input ~ 0
+GPIO11_SPI_SCLK
+Text GLabel 6715 2500 0    20   Input ~ 0
+GPIO9_SPI_MISO
+Text GLabel 6715 2400 0    20   Input ~ 0
+GPIO10_SPI_MOSI
+Text GLabel 9240 2500 2    20   Input ~ 0
+GPIO25_GEN6
+Wire Wire Line
+	8200 2500 9240 2500
+Wire Wire Line
+	8200 2600 9240 2600
+Wire Wire Line
+	6715 2400 7700 2400
+Wire Wire Line
+	6715 2500 7700 2500
+Wire Wire Line
+	6715 2600 7700 2600
+Text GLabel 6375 1600 0    20   Input ~ 0
+SDA
+Wire Wire Line
+	6425 1600 7700 1600
+Wire Wire Line
+	6375 1600 6425 1600
+Connection ~ 6425 1600
+Text GLabel 6070 1700 0    20   Input ~ 0
+SCL
+Wire Wire Line
+	6070 1700 6125 1700
+Connection ~ 6125 1700
+Wire Wire Line
+	6125 1700 7700 1700
+Text GLabel 6750 3300 0    20   Input ~ 0
+GPIO_RST_0
+Text GLabel 6750 3100 0    20   Input ~ 0
+GPIO_RST_1
+Text GLabel 6640 2100 0    20   Input ~ 0
+GPIO_RST_2
+Text GLabel 9070 2000 2    20   Input ~ 0
+GPIO_RST_3
+Wire Wire Line
+	6640 2000 7700 2000
+Wire Wire Line
+	6640 2100 7700 2100
+Wire Wire Line
+	6640 2200 7700 2200
+Wire Wire Line
+	8200 2000 9070 2000
+Text Label 8550 3400 0    50   ~ 0
+GPIO21
+Wire Wire Line
+	10395 3430 10395 3680
+Wire Wire Line
+	10035 3425 10035 3675
+Wire Wire Line
+	9830 3420 9830 3670
+$Comp
+L Device:R R?
+U 1 1 5F0A71E8
+P 10395 2880
+AR Path="/5F028404/5F0A71E8" Ref="R?"  Part="1" 
+AR Path="/5F0A71E8" Ref="R70"  Part="1" 
+F 0 "R70" V 10445 3030 50  0000 C CNN
+F 1 "220" V 10395 2880 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 10325 2880 50  0001 C CNN
+F 3 "~" H 10395 2880 50  0001 C CNN
+F 4 "P220ECT-ND" V 10395 2880 50  0001 C CNN "DPN"
+	1    10395 2880
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10395 3030 10395 3130
+$Comp
+L Device:LED D?
+U 1 1 5F0A71E0
+P 10395 3280
+AR Path="/5F028404/5F0A71E0" Ref="D?"  Part="1" 
+AR Path="/5F0A71E0" Ref="D6"  Part="1" 
+F 0 "D6" H 10495 3255 50  0000 C CNN
+F 1 "Green" H 10570 3330 50  0000 C CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 10395 3280 50  0001 C CNN
+F 3 "~" H 10395 3280 50  0001 C CNN
+F 4 "732-4990-1-ND" H 10395 3280 50  0001 C CNN "DPN"
+	1    10395 3280
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F0A1736
+P 10035 2875
+AR Path="/5F028404/5F0A1736" Ref="R?"  Part="1" 
+AR Path="/5F0A1736" Ref="R68"  Part="1" 
+F 0 "R68" V 10085 3025 50  0000 C CNN
+F 1 "220" V 10035 2875 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 9965 2875 50  0001 C CNN
+F 3 "~" H 10035 2875 50  0001 C CNN
+F 4 "P220ECT-ND" V 10035 2875 50  0001 C CNN "DPN"
+	1    10035 2875
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10035 3025 10035 3125
+$Comp
+L Device:LED D?
+U 1 1 5F0A172E
+P 10035 3275
+AR Path="/5F028404/5F0A172E" Ref="D?"  Part="1" 
+AR Path="/5F0A172E" Ref="D4"  Part="1" 
+F 0 "D4" H 10135 3250 50  0000 C CNN
+F 1 "Green" H 10210 3325 50  0000 C CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 10035 3275 50  0001 C CNN
+F 3 "~" H 10035 3275 50  0001 C CNN
+F 4 "732-4990-1-ND" H 10035 3275 50  0001 C CNN "DPN"
+	1    10035 3275
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F09E9E1
+P 9830 2870
+AR Path="/5F028404/5F09E9E1" Ref="R?"  Part="1" 
+AR Path="/5F09E9E1" Ref="R67"  Part="1" 
+F 0 "R67" V 9880 3020 50  0000 C CNN
+F 1 "220" V 9830 2870 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 9760 2870 50  0001 C CNN
+F 3 "~" H 9830 2870 50  0001 C CNN
+F 4 "P220ECT-ND" V 9830 2870 50  0001 C CNN "DPN"
+	1    9830 2870
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9830 3020 9830 3120
+$Comp
+L Device:LED D?
+U 1 1 5F09E9D9
+P 9830 3270
+AR Path="/5F028404/5F09E9D9" Ref="D?"  Part="1" 
+AR Path="/5F09E9D9" Ref="D3"  Part="1" 
+F 0 "D3" H 9930 3245 50  0000 C CNN
+F 1 "Green" H 10005 3320 50  0000 C CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 9830 3270 50  0001 C CNN
+F 3 "~" H 9830 3270 50  0001 C CNN
+F 4 "732-4990-1-ND" H 9830 3270 50  0001 C CNN "DPN"
+	1    9830 3270
+	0    -1   -1   0   
+$EndComp
+Text Label 8975 3400 0    50   ~ 0
+bank_0_led
+Wire Wire Line
+	9830 2720 9830 2170
+$Comp
+L power:GND #PWR0201
+U 1 1 5F16F56A
+P 9830 3670
+F 0 "#PWR0201" H 9830 3420 50  0001 C CNN
+F 1 "GND" H 9835 3497 50  0001 C CNN
+F 2 "" H 9830 3670 50  0001 C CNN
+F 3 "" H 9830 3670 50  0001 C CNN
+	1    9830 3670
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8200 3000 8755 3000
+Text Label 8455 3000 0    50   ~ 0
+GPIO12
+$Comp
+L Device:LED D?
+U 1 1 5F0A41D6
+P 10235 3275
+AR Path="/5F028404/5F0A41D6" Ref="D?"  Part="1" 
+AR Path="/5F0A41D6" Ref="D5"  Part="1" 
+F 0 "D5" H 10335 3250 50  0000 C CNN
+F 1 "Green" H 10410 3325 50  0000 C CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 10235 3275 50  0001 C CNN
+F 3 "~" H 10235 3275 50  0001 C CNN
+F 4 "732-4990-1-ND" H 10235 3275 50  0001 C CNN "DPN"
+	1    10235 3275
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10235 3025 10235 3125
+$Comp
+L Device:R R?
+U 1 1 5F0A41DE
+P 10235 2875
+AR Path="/5F028404/5F0A41DE" Ref="R?"  Part="1" 
+AR Path="/5F0A41DE" Ref="R69"  Part="1" 
+F 0 "R69" V 10285 3025 50  0000 C CNN
+F 1 "220" V 10235 2875 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 10165 2875 50  0001 C CNN
+F 3 "~" H 10235 2875 50  0001 C CNN
+F 4 "P220ECT-ND" V 10235 2875 50  0001 C CNN "DPN"
+	1    10235 2875
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10235 3425 10235 3675
+Text Label 10035 2245 3    50   ~ 0
+bank_1_led
+Wire Wire Line
+	10035 2245 10035 2725
+$Comp
+L power:GND #PWR0252
+U 1 1 5F184995
+P 10035 3675
+F 0 "#PWR0252" H 10035 3425 50  0001 C CNN
+F 1 "GND" H 10040 3502 50  0001 C CNN
+F 2 "" H 10035 3675 50  0001 C CNN
+F 3 "" H 10035 3675 50  0001 C CNN
+	1    10035 3675
+	1    0    0    -1  
+$EndComp
+Text Label 6750 3200 2    50   ~ 0
+bank_1_led
+$Comp
+L power:GND #PWR0253
+U 1 1 5F18CA70
+P 10235 3675
+F 0 "#PWR0253" H 10235 3425 50  0001 C CNN
+F 1 "GND" H 10240 3502 50  0001 C CNN
+F 2 "" H 10235 3675 50  0001 C CNN
+F 3 "" H 10235 3675 50  0001 C CNN
+	1    10235 3675
+	1    0    0    -1  
+$EndComp
+Text Label 10235 2250 3    50   ~ 0
+bank_2_led
+Wire Wire Line
+	10235 2250 10235 2725
+Text Label 6640 2200 2    50   ~ 0
+bank_2_led
+Text Label 10395 2250 3    50   ~ 0
+bank_3_led
+Wire Wire Line
+	10395 2730 10395 2250
+$Comp
+L power:GND #PWR0254
+U 1 1 5F1A348A
+P 10395 3680
+F 0 "#PWR0254" H 10395 3430 50  0001 C CNN
+F 1 "GND" H 10400 3507 50  0001 C CNN
+F 2 "" H 10395 3680 50  0001 C CNN
+F 3 "" H 10395 3680 50  0001 C CNN
+	1    10395 3680
+	1    0    0    -1  
+$EndComp
+Text Label 9350 1815 0    50   ~ 0
+bank_3_led
+Text Label 6640 2000 2    50   ~ 0
+bank_3_led
 $EndSCHEMATC

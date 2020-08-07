@@ -246,14 +246,6 @@ Wire Wire Line
 	2975 1175 2975 1525
 Wire Wire Line
 	2850 2025 2975 2025
-Text Label 2850 2225 0    50   ~ 0
-SDA
-Text Label 2850 2325 0    50   ~ 0
-SCL
-Wire Wire Line
-	3075 2325 2850 2325
-Wire Wire Line
-	2850 2225 3075 2225
 $Comp
 L atv_cluster_hat:PCA9552PW,118 U2
 U 1 1 5F0D4B2A
@@ -480,11 +472,7 @@ Wire Wire Line
 Wire Wire Line
 	6250 1200 6250 1550
 Wire Wire Line
-	6125 2050 6225 2050
-Text Label 6125 2250 0    50   ~ 0
-SDA
-Text Label 6125 2350 0    50   ~ 0
-SCL
+	6125 2050 6180 2050
 Wire Wire Line
 	6350 2350 6125 2350
 Wire Wire Line
@@ -705,12 +693,6 @@ Wire Wire Line
 	3050 4025 2900 4025
 Wire Wire Line
 	3050 4025 3050 4375
-Wire Wire Line
-	2925 4875 3025 4875
-Text Label 2925 5075 0    50   ~ 0
-SDA
-Text Label 2925 5175 0    50   ~ 0
-SCL
 Wire Wire Line
 	3150 5175 2925 5175
 Wire Wire Line
@@ -942,10 +924,6 @@ Wire Wire Line
 	6325 4050 6325 4400
 Wire Wire Line
 	6200 4900 6300 4900
-Text Label 6200 5100 0    50   ~ 0
-SDA
-Text Label 6200 5200 0    50   ~ 0
-SCL
 Wire Wire Line
 	6425 5200 6200 5200
 Wire Wire Line
@@ -1010,49 +988,15 @@ F 3 "" H 5600 4325 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5625 4600 5875 4600
-Text Label 1675 2150 0    50   ~ 0
-GPIO17_GEN0
-Text Label 1750 5000 0    50   ~ 0
-GPIO27_GEN2
-Text Label 6000 5100 2    50   ~ 0
-GPIO22_GEN3
 Wire Wire Line
 	2650 2150 2650 2100
 Wire Wire Line
 	2650 2100 2975 2100
 Wire Wire Line
 	2975 2100 2975 2025
-Wire Wire Line
-	1675 2150 2650 2150
 Connection ~ 2975 2025
 Wire Wire Line
 	2975 2025 3075 2025
-Text Label 5325 2225 0    50   ~ 0
-GPIO18_GEN1
-Wire Wire Line
-	5325 2225 5875 2225
-Wire Wire Line
-	5875 2225 5875 2125
-Wire Wire Line
-	5875 2125 6225 2125
-Wire Wire Line
-	6225 2125 6225 2050
-Connection ~ 6225 2050
-Wire Wire Line
-	6225 2050 6350 2050
-Wire Wire Line
-	2875 5000 2875 4950
-Wire Wire Line
-	2875 4950 3025 4950
-Wire Wire Line
-	3025 4950 3025 4875
-Wire Wire Line
-	1750 5000 2875 5000
-Connection ~ 3025 4875
-Wire Wire Line
-	3025 4875 3150 4875
-Wire Wire Line
-	6000 5100 6075 5100
 Wire Wire Line
 	6075 5100 6075 5000
 Wire Wire Line
@@ -1062,10 +1006,6 @@ Wire Wire Line
 Connection ~ 6300 4900
 Wire Wire Line
 	6300 4900 6425 4900
-Text Label 8925 5200 0    50   ~ 0
-SDA
-Text Label 8925 5300 0    50   ~ 0
-SCL
 $Comp
 L Device:R R?
 U 1 1 5F1FB8A0
@@ -1130,21 +1070,21 @@ Wire Wire Line
 Connection ~ 9450 4800
 Text Notes 8775 5500 0    50   ~ 0
 Place second set of pull ups\n at final gpio expander
-Text GLabel 4550 1525 2    20   Input ~ 0
-pwr_toggle_00
-Text GLabel 4550 1625 2    20   Input ~ 0
-pwr_toggle_01
-Text GLabel 4550 1725 2    20   Input ~ 0
-pwr_toggle_02
-Text GLabel 4550 1825 2    20   Input ~ 0
-pwr_toggle_03
-Text GLabel 4550 1925 2    20   Input ~ 0
-pwr_toggle_04
-Text GLabel 4550 2025 2    20   Input ~ 0
-pwr_toggle_05
-Text GLabel 4550 2125 2    20   Input ~ 0
-pwr_toggle_06
 Text GLabel 4550 2225 2    20   Input ~ 0
+pwr_toggle_00
+Text GLabel 4550 2125 2    20   Input ~ 0
+pwr_toggle_01
+Text GLabel 4550 2025 2    20   Input ~ 0
+pwr_toggle_02
+Text GLabel 4550 1925 2    20   Input ~ 0
+pwr_toggle_03
+Text GLabel 4550 1825 2    20   Input ~ 0
+pwr_toggle_04
+Text GLabel 4550 1725 2    20   Input ~ 0
+pwr_toggle_05
+Text GLabel 4550 1625 2    20   Input ~ 0
+pwr_toggle_06
+Text GLabel 4550 1525 2    20   Input ~ 0
 pwr_toggle_07
 Text GLabel 4550 2325 2    20   Input ~ 0
 pwr_toggle_08
@@ -1194,21 +1134,21 @@ Wire Wire Line
 	4475 2925 4550 2925
 Wire Wire Line
 	4475 3025 4550 3025
-Text GLabel 7825 1550 2    20   Input ~ 0
-pwr_toggle_16
-Text GLabel 7825 1650 2    20   Input ~ 0
-pwr_toggle_17
-Text GLabel 7825 1750 2    20   Input ~ 0
-pwr_toggle_18
-Text GLabel 7825 1850 2    20   Input ~ 0
-pwr_toggle_19
-Text GLabel 7825 1950 2    20   Input ~ 0
-pwr_toggle_20
-Text GLabel 7825 2050 2    20   Input ~ 0
-pwr_toggle_21
-Text GLabel 7825 2150 2    20   Input ~ 0
-pwr_toggle_22
 Text GLabel 7825 2250 2    20   Input ~ 0
+pwr_toggle_16
+Text GLabel 7825 2150 2    20   Input ~ 0
+pwr_toggle_17
+Text GLabel 7825 2050 2    20   Input ~ 0
+pwr_toggle_18
+Text GLabel 7825 1950 2    20   Input ~ 0
+pwr_toggle_19
+Text GLabel 7825 1850 2    20   Input ~ 0
+pwr_toggle_20
+Text GLabel 7825 1750 2    20   Input ~ 0
+pwr_toggle_21
+Text GLabel 7825 1650 2    20   Input ~ 0
+pwr_toggle_22
+Text GLabel 7825 1550 2    20   Input ~ 0
 pwr_toggle_23
 Text GLabel 7825 2350 2    20   Input ~ 0
 pwr_toggle_24
@@ -1258,21 +1198,21 @@ Wire Wire Line
 	7750 2950 7825 2950
 Wire Wire Line
 	7750 3050 7825 3050
-Text GLabel 4625 4375 2    20   Input ~ 0
-pwr_toggle_32
-Text GLabel 4625 4475 2    20   Input ~ 0
-pwr_toggle_33
-Text GLabel 4625 4575 2    20   Input ~ 0
-pwr_toggle_34
-Text GLabel 4625 4675 2    20   Input ~ 0
-pwr_toggle_35
-Text GLabel 4625 4775 2    20   Input ~ 0
-pwr_toggle_36
-Text GLabel 4625 4875 2    20   Input ~ 0
-pwr_toggle_37
-Text GLabel 4625 4975 2    20   Input ~ 0
-pwr_toggle_38
 Text GLabel 4625 5075 2    20   Input ~ 0
+pwr_toggle_32
+Text GLabel 4625 4975 2    20   Input ~ 0
+pwr_toggle_33
+Text GLabel 4625 4875 2    20   Input ~ 0
+pwr_toggle_34
+Text GLabel 4625 4775 2    20   Input ~ 0
+pwr_toggle_35
+Text GLabel 4625 4675 2    20   Input ~ 0
+pwr_toggle_36
+Text GLabel 4625 4575 2    20   Input ~ 0
+pwr_toggle_37
+Text GLabel 4625 4475 2    20   Input ~ 0
+pwr_toggle_38
+Text GLabel 4625 4375 2    20   Input ~ 0
 pwr_toggle_39
 Text GLabel 4625 5175 2    20   Input ~ 0
 pwr_toggle_40
@@ -1322,21 +1262,21 @@ Wire Wire Line
 	4550 5775 4625 5775
 Wire Wire Line
 	4550 5875 4625 5875
-Text GLabel 7900 4400 2    20   Input ~ 0
-pwr_toggle_48
-Text GLabel 7900 4500 2    20   Input ~ 0
-pwr_toggle_49
-Text GLabel 7900 4600 2    20   Input ~ 0
-pwr_toggle_50
-Text GLabel 7900 4700 2    20   Input ~ 0
-pwr_toggle_51
-Text GLabel 7900 4800 2    20   Input ~ 0
-pwr_toggle_52
-Text GLabel 7900 4900 2    20   Input ~ 0
-pwr_toggle_53
-Text GLabel 7900 5000 2    20   Input ~ 0
-pwr_toggle_54
 Text GLabel 7900 5100 2    20   Input ~ 0
+pwr_toggle_48
+Text GLabel 7900 5000 2    20   Input ~ 0
+pwr_toggle_49
+Text GLabel 7900 4900 2    20   Input ~ 0
+pwr_toggle_50
+Text GLabel 7900 4800 2    20   Input ~ 0
+pwr_toggle_51
+Text GLabel 7900 4700 2    20   Input ~ 0
+pwr_toggle_52
+Text GLabel 7900 4600 2    20   Input ~ 0
+pwr_toggle_53
+Text GLabel 7900 4500 2    20   Input ~ 0
+pwr_toggle_54
+Text GLabel 7900 4400 2    20   Input ~ 0
 pwr_toggle_55
 Text GLabel 7900 5200 2    20   Input ~ 0
 pwr_toggle_56
@@ -1386,4 +1326,56 @@ Wire Wire Line
 	7825 5800 7900 5800
 Wire Wire Line
 	7825 5900 7900 5900
+Text GLabel 2600 2150 0    20   Input ~ 0
+GPIO_RST_0
+Text GLabel 5920 2170 0    20   Input ~ 0
+GPIO_RST_1
+Text GLabel 5980 5100 0    20   Input ~ 0
+GPIO_RST_3
+Wire Wire Line
+	2600 2150 2650 2150
+Wire Wire Line
+	5920 2170 6180 2170
+Wire Wire Line
+	6180 2170 6180 2050
+Connection ~ 6180 2050
+Wire Wire Line
+	6180 2050 6350 2050
+Text GLabel 2730 4970 0    20   Input ~ 0
+GPIO_RST_2
+Wire Wire Line
+	2925 4875 2990 4875
+Wire Wire Line
+	2730 4970 2990 4970
+Wire Wire Line
+	2990 4970 2990 4875
+Connection ~ 2990 4875
+Wire Wire Line
+	2990 4875 3150 4875
+Wire Wire Line
+	5980 5100 6075 5100
+Text GLabel 2835 2225 0    20   Input ~ 0
+SDA
+Wire Wire Line
+	2835 2225 3075 2225
+Text GLabel 2835 2325 0    20   Input ~ 0
+SCL
+Wire Wire Line
+	2835 2325 3075 2325
+Text GLabel 6125 2250 0    20   Input ~ 0
+SDA
+Text GLabel 6125 2350 0    20   Input ~ 0
+SCL
+Text GLabel 2925 5075 0    20   Input ~ 0
+SDA
+Text GLabel 2925 5175 0    20   Input ~ 0
+SCL
+Text GLabel 6200 5100 0    20   Input ~ 0
+SDA
+Text GLabel 6200 5200 0    20   Input ~ 0
+SCL
+Text GLabel 8925 5200 0    20   Input ~ 0
+SDA
+Text GLabel 8925 5300 0    20   Input ~ 0
+SCL
 $EndSCHEMATC

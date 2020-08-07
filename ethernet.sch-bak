@@ -358,7 +358,7 @@ F 4 "P10.0KFCT-ND" H 1600 3450 50  0001 C CNN "DPN"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2600 3650 1600 3650
+	2600 3650 2425 3650
 Wire Wire Line
 	1600 3650 1600 3600
 Text Label 1625 3650 0    50   ~ 0
@@ -593,26 +593,10 @@ Wire Wire Line
 	4000 3750 4525 3750
 Wire Wire Line
 	4525 3750 4525 3775
-Text Label 1900 3650 0    50   ~ 0
-GPIO8_SPI_CE0_N
-Text Label 2550 3550 2    50   ~ 0
-GPIO11_SPI_SCLK
-Wire Wire Line
-	2600 3550 2550 3550
 NoConn ~ 2600 4750
-Text Label 2525 3850 2    50   ~ 0
-GPIO25_GEN6
-Wire Wire Line
-	2600 3850 2525 3850
 NoConn ~ 2600 3950
-Text Label 2550 3450 2    50   ~ 0
-GPIO9_SPI_MISO
 Wire Wire Line
 	2550 3450 2600 3450
-Text Label 2550 3350 2    50   ~ 0
-GPIO10_SPI_MOSI
-Wire Wire Line
-	2550 3350 2600 3350
 $Comp
 L Device:C C?
 U 1 1 5F27C918
@@ -850,4 +834,27 @@ Wire Wire Line
 Wire Wire Line
 	8875 5425 8825 5425
 Connection ~ 8825 5425
+Text GLabel 2450 3850 0    20   Input ~ 0
+GPIO25_GEN6
+Wire Wire Line
+	2450 3850 2600 3850
+Text GLabel 2385 3605 0    20   Input ~ 0
+GPIO8_SPI_CE0_N
+Text GLabel 2540 3550 0    20   Input ~ 0
+GPIO11_SPI_SCLK
+Wire Wire Line
+	2385 3605 2425 3605
+Wire Wire Line
+	2425 3605 2425 3650
+Connection ~ 2425 3650
+Wire Wire Line
+	2425 3650 1600 3650
+Text GLabel 2550 3450 0    20   Input ~ 0
+GPIO9_SPI_MISO
+Text GLabel 2535 3350 0    20   Input ~ 0
+GPIO10_SPI_MOSI
+Wire Wire Line
+	2540 3550 2600 3550
+Wire Wire Line
+	2535 3350 2600 3350
 $EndSCHEMATC
