@@ -698,237 +698,6 @@ Wire Wire Line
 Wire Wire Line
 	2925 5075 3150 5075
 $Comp
-L atv_cluster_hat:PCA9552PW,118 U4
-U 1 1 5F0E5BB2
-P 7125 5100
-F 0 "U4" H 7125 6265 50  0000 C CNN
-F 1 "PCA9552PW,118" H 7125 6174 50  0000 C CNN
-F 2 "lib:SOP65P640X110-24N" H 6625 3750 50  0001 L BNN
-F 3 "https://www.nxp.com/docs/en/data-sheet/PCA9552.pdf" H 6925 3650 50  0001 L BNN
-F 4 "568-11924-1-ND" H 7125 3600 50  0001 C CNN "DPN"
-F 5 "PCA9552PW,118" H 7125 3500 50  0001 C CNN "PN"
-F 6 "https://www.digikey.com/product-detail/en/nxp-usa-inc/PCA9552PW-118/568-11924-1-ND/5221886" H 7125 3700 50  0001 C CNN "URL"
-	1    7125 5100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C?
-U 1 1 5F0E5BBD
-P 6050 5650
-AR Path="/5F0E5BBD" Ref="C?"  Part="1" 
-AR Path="/5F028404/5F0E5BBD" Ref="C9"  Part="1" 
-F 0 "C9" H 5935 5604 50  0000 R CNN
-F 1 "100n" H 5935 5695 50  0000 R CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 6088 5500 50  0001 C CNN
-F 3 "~" H 6050 5650 50  0001 C CNN
-F 4 "732-8109-1-ND" H 6050 5650 50  0001 C CNN "DPN"
-	1    6050 5650
-	1    0    0    1   
-$EndComp
-$Comp
-L Device:C C?
-U 1 1 5F0E5BC8
-P 6275 5650
-AR Path="/5F0E5BC8" Ref="C?"  Part="1" 
-AR Path="/5F028404/5F0E5BC8" Ref="C10"  Part="1" 
-F 0 "C10" H 6160 5604 50  0000 R CNN
-F 1 "10u" H 6160 5695 50  0000 R CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 6313 5500 50  0001 C CNN
-F 3 "~" H 6275 5650 50  0001 C CNN
-F 4 "1276-1055-1-ND" H 6275 5650 50  0001 C CNN "DPN"
-	1    6275 5650
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5F0E5BD3
-P 6025 4600
-AR Path="/5F0E5BD3" Ref="R?"  Part="1" 
-AR Path="/5EFF957B/5F0E5BD3" Ref="R?"  Part="1" 
-AR Path="/5F028404/5F0E5BD3" Ref="R84"  Part="1" 
-F 0 "R84" H 6095 4646 50  0000 L CNN
-F 1 "10k" H 6095 4555 50  0000 L CNN
-F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 5955 4600 50  0001 C CNN
-F 3 "~" H 6025 4600 50  0001 C CNN
-F 4 "P10.0KFCT-ND" H 6025 4600 50  0001 C CNN "DPN"
-	1    6025 4600
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5F0E5BDE
-P 6025 4325
-AR Path="/5F0E5BDE" Ref="R?"  Part="1" 
-AR Path="/5EFF957B/5F0E5BDE" Ref="R?"  Part="1" 
-AR Path="/5F028404/5F0E5BDE" Ref="R82"  Part="1" 
-F 0 "R82" H 6095 4371 50  0000 L CNN
-F 1 "10k" H 6095 4280 50  0000 L CNN
-F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 5955 4325 50  0001 C CNN
-F 3 "~" H 6025 4325 50  0001 C CNN
-F 4 "P10.0KFCT-ND" H 6025 4325 50  0001 C CNN "DPN"
-	1    6025 4325
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5F0E5BE9
-P 6025 4050
-AR Path="/5F0E5BE9" Ref="R?"  Part="1" 
-AR Path="/5EFF957B/5F0E5BE9" Ref="R?"  Part="1" 
-AR Path="/5F028404/5F0E5BE9" Ref="R80"  Part="1" 
-F 0 "R80" H 6095 4096 50  0000 L CNN
-F 1 "10k" H 6095 4005 50  0000 L CNN
-F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 5955 4050 50  0001 C CNN
-F 3 "~" H 6025 4050 50  0001 C CNN
-F 4 "P10.0KFCT-ND" H 6025 4050 50  0001 C CNN "DPN"
-	1    6025 4050
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5F0E5BF4
-P 6050 4900
-AR Path="/5F0E5BF4" Ref="R?"  Part="1" 
-AR Path="/5EFF957B/5F0E5BF4" Ref="R?"  Part="1" 
-AR Path="/5F028404/5F0E5BF4" Ref="R86"  Part="1" 
-F 0 "R86" H 6120 4946 50  0000 L CNN
-F 1 "10k" H 6120 4855 50  0000 L CNN
-F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 5980 4900 50  0001 C CNN
-F 3 "~" H 6050 4900 50  0001 C CNN
-F 4 "P10.0KFCT-ND" H 6050 4900 50  0001 C CNN "DPN"
-	1    6050 4900
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR0231
-U 1 1 5F0E5BFE
-P 7900 6250
-F 0 "#PWR0231" H 7900 6000 50  0001 C CNN
-F 1 "GND" H 7905 6077 50  0000 C CNN
-F 2 "" H 7900 6250 50  0001 C CNN
-F 3 "" H 7900 6250 50  0001 C CNN
-	1    7900 6250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7825 6100 7900 6100
-Wire Wire Line
-	7900 6100 7900 6250
-Wire Wire Line
-	7825 4200 7925 4200
-Wire Wire Line
-	5875 5450 6050 5450
-Wire Wire Line
-	6050 5450 6050 5500
-Wire Wire Line
-	6050 5450 6275 5450
-Wire Wire Line
-	6275 5450 6275 5500
-Connection ~ 6050 5450
-$Comp
-L power:GND #PWR0229
-U 1 1 5F0E5C10
-P 6275 5925
-F 0 "#PWR0229" H 6275 5675 50  0001 C CNN
-F 1 "GND" H 6280 5752 50  0000 C CNN
-F 2 "" H 6275 5925 50  0001 C CNN
-F 3 "" H 6275 5925 50  0001 C CNN
-	1    6275 5925
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6050 5800 6050 5875
-Wire Wire Line
-	6050 5875 6275 5875
-Wire Wire Line
-	6275 5875 6275 5925
-Wire Wire Line
-	6275 5800 6275 5875
-Connection ~ 6275 5875
-$Comp
-L power:+3.3V #PWR?
-U 1 1 5F0E5C1F
-P 7925 4025
-AR Path="/5F0E5C1F" Ref="#PWR?"  Part="1" 
-AR Path="/5F028404/5F0E5C1F" Ref="#PWR0218"  Part="1" 
-F 0 "#PWR0218" H 7925 3875 50  0001 C CNN
-F 1 "+3.3V" H 7940 4198 50  0000 C CNN
-F 2 "" H 7925 4025 50  0001 C CNN
-F 3 "" H 7925 4025 50  0001 C CNN
-	1    7925 4025
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7925 4025 7925 4200
-$Comp
-L power:+3.3V #PWR?
-U 1 1 5F0E5C2A
-P 5875 5450
-AR Path="/5F0E5C2A" Ref="#PWR?"  Part="1" 
-AR Path="/5F028404/5F0E5C2A" Ref="#PWR0227"  Part="1" 
-F 0 "#PWR0227" H 5875 5300 50  0001 C CNN
-F 1 "+3.3V" H 5890 5623 50  0000 C CNN
-F 2 "" H 5875 5450 50  0001 C CNN
-F 3 "" H 5875 5450 50  0001 C CNN
-	1    5875 5450
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0222
-U 1 1 5F0E5C34
-P 5625 4600
-F 0 "#PWR0222" H 5625 4350 50  0001 C CNN
-F 1 "GND" H 5630 4427 50  0000 C CNN
-F 2 "" H 5625 4600 50  0001 C CNN
-F 3 "" H 5625 4600 50  0001 C CNN
-	1    5625 4600
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6425 4400 6325 4400
-Wire Wire Line
-	5875 4050 5750 4050
-Wire Wire Line
-	5750 4050 5750 4325
-Wire Wire Line
-	5750 4325 5600 4325
-Wire Wire Line
-	5875 4325 5750 4325
-Connection ~ 5750 4325
-$Comp
-L power:+3.3V #PWR?
-U 1 1 5F0E5C46
-P 5775 4900
-AR Path="/5F0E5C46" Ref="#PWR?"  Part="1" 
-AR Path="/5F028404/5F0E5C46" Ref="#PWR0225"  Part="1" 
-F 0 "#PWR0225" H 5775 4750 50  0001 C CNN
-F 1 "+3.3V" H 5790 5073 50  0000 C CNN
-F 2 "" H 5775 4900 50  0001 C CNN
-F 3 "" H 5775 4900 50  0001 C CNN
-	1    5775 4900
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	5775 4900 5900 4900
-Wire Wire Line
-	6175 4600 6425 4600
-Wire Wire Line
-	6425 4500 6225 4500
-Wire Wire Line
-	6225 4500 6225 4325
-Wire Wire Line
-	6225 4325 6175 4325
-Wire Wire Line
-	6325 4050 6175 4050
-Wire Wire Line
-	6325 4050 6325 4400
-Wire Wire Line
-	6200 4900 6300 4900
-Wire Wire Line
-	6425 5200 6200 5200
-Wire Wire Line
-	6200 5100 6425 5100
-$Comp
 L power:+3.3V #PWR?
 U 1 1 5F12CB68
 P 5475 1200
@@ -973,21 +742,6 @@ F 3 "" H 2375 4575 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2375 4575 2600 4575
-$Comp
-L power:+3.3V #PWR?
-U 1 1 5F1540F2
-P 5600 4325
-AR Path="/5F1540F2" Ref="#PWR?"  Part="1" 
-AR Path="/5F028404/5F1540F2" Ref="#PWR0220"  Part="1" 
-F 0 "#PWR0220" H 5600 4175 50  0001 C CNN
-F 1 "+3.3V" H 5615 4498 50  0000 C CNN
-F 2 "" H 5600 4325 50  0001 C CNN
-F 3 "" H 5600 4325 50  0001 C CNN
-	1    5600 4325
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	5625 4600 5875 4600
 Wire Wire Line
 	2650 2150 2650 2100
 Wire Wire Line
@@ -997,15 +751,6 @@ Wire Wire Line
 Connection ~ 2975 2025
 Wire Wire Line
 	2975 2025 3075 2025
-Wire Wire Line
-	6075 5100 6075 5000
-Wire Wire Line
-	6075 5000 6300 5000
-Wire Wire Line
-	6300 5000 6300 4900
-Connection ~ 6300 4900
-Wire Wire Line
-	6300 4900 6425 4900
 $Comp
 L Device:R R?
 U 1 1 5F1FB8A0
@@ -1262,76 +1007,10 @@ Wire Wire Line
 	4550 5775 4625 5775
 Wire Wire Line
 	4550 5875 4625 5875
-Text GLabel 7900 5100 2    20   Input ~ 0
-pwr_toggle_48
-Text GLabel 7900 5000 2    20   Input ~ 0
-pwr_toggle_49
-Text GLabel 7900 4900 2    20   Input ~ 0
-pwr_toggle_50
-Text GLabel 7900 4800 2    20   Input ~ 0
-pwr_toggle_51
-Text GLabel 7900 4700 2    20   Input ~ 0
-pwr_toggle_52
-Text GLabel 7900 4600 2    20   Input ~ 0
-pwr_toggle_53
-Text GLabel 7900 4500 2    20   Input ~ 0
-pwr_toggle_54
-Text GLabel 7900 4400 2    20   Input ~ 0
-pwr_toggle_55
-Text GLabel 7900 5200 2    20   Input ~ 0
-pwr_toggle_56
-Text GLabel 7900 5300 2    20   Input ~ 0
-pwr_toggle_57
-Text GLabel 7900 5400 2    20   Input ~ 0
-pwr_toggle_58
-Text GLabel 7900 5500 2    20   Input ~ 0
-pwr_toggle_59
-Text GLabel 7900 5600 2    20   Input ~ 0
-pwr_toggle_60
-Text GLabel 7900 5700 2    20   Input ~ 0
-pwr_toggle_61
-Text GLabel 7900 5800 2    20   Input ~ 0
-pwr_toggle_62
-Text GLabel 7900 5900 2    20   Input ~ 0
-pwr_toggle_63
-Wire Wire Line
-	7825 4400 7900 4400
-Wire Wire Line
-	7900 4500 7825 4500
-Wire Wire Line
-	7825 4600 7900 4600
-Wire Wire Line
-	7825 4700 7900 4700
-Wire Wire Line
-	7825 4800 7900 4800
-Wire Wire Line
-	7825 4900 7900 4900
-Wire Wire Line
-	7825 5000 7900 5000
-Wire Wire Line
-	7825 5100 7900 5100
-Wire Wire Line
-	7825 5200 7900 5200
-Wire Wire Line
-	7825 5300 7900 5300
-Wire Wire Line
-	7825 5400 7900 5400
-Wire Wire Line
-	7825 5500 7900 5500
-Wire Wire Line
-	7825 5600 7900 5600
-Wire Wire Line
-	7825 5700 7900 5700
-Wire Wire Line
-	7825 5800 7900 5800
-Wire Wire Line
-	7825 5900 7900 5900
 Text GLabel 2600 2150 0    20   Input ~ 0
 GPIO_RST_0
 Text GLabel 5920 2170 0    20   Input ~ 0
 GPIO_RST_1
-Text GLabel 5980 5100 0    20   Input ~ 0
-GPIO_RST_3
 Wire Wire Line
 	2600 2150 2650 2150
 Wire Wire Line
@@ -1352,8 +1031,6 @@ Wire Wire Line
 Connection ~ 2990 4875
 Wire Wire Line
 	2990 4875 3150 4875
-Wire Wire Line
-	5980 5100 6075 5100
 Text GLabel 2835 2225 0    20   Input ~ 0
 SDA
 Wire Wire Line
@@ -1369,10 +1046,6 @@ SCL
 Text GLabel 2925 5075 0    20   Input ~ 0
 SDA
 Text GLabel 2925 5175 0    20   Input ~ 0
-SCL
-Text GLabel 6200 5100 0    20   Input ~ 0
-SDA
-Text GLabel 6200 5200 0    20   Input ~ 0
 SCL
 Text GLabel 8925 5200 0    20   Input ~ 0
 SDA

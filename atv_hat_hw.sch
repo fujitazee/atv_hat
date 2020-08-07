@@ -576,41 +576,9 @@ Wire Wire Line
 Text Label 8550 3400 0    50   ~ 0
 GPIO21
 Wire Wire Line
-	10395 3430 10395 3680
-Wire Wire Line
 	10035 3425 10035 3675
 Wire Wire Line
 	9830 3420 9830 3670
-$Comp
-L Device:R R?
-U 1 1 5F0A71E8
-P 10395 2880
-AR Path="/5F028404/5F0A71E8" Ref="R?"  Part="1" 
-AR Path="/5F0A71E8" Ref="R70"  Part="1" 
-F 0 "R70" V 10445 3030 50  0000 C CNN
-F 1 "220" V 10395 2880 50  0000 C CNN
-F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 10325 2880 50  0001 C CNN
-F 3 "~" H 10395 2880 50  0001 C CNN
-F 4 "P220ECT-ND" V 10395 2880 50  0001 C CNN "DPN"
-	1    10395 2880
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10395 3030 10395 3130
-$Comp
-L Device:LED D?
-U 1 1 5F0A71E0
-P 10395 3280
-AR Path="/5F028404/5F0A71E0" Ref="D?"  Part="1" 
-AR Path="/5F0A71E0" Ref="D6"  Part="1" 
-F 0 "D6" H 10495 3255 50  0000 C CNN
-F 1 "Green" H 10570 3330 50  0000 C CNN
-F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 10395 3280 50  0001 C CNN
-F 3 "~" H 10395 3280 50  0001 C CNN
-F 4 "732-4990-1-ND" H 10395 3280 50  0001 C CNN "DPN"
-	1    10395 3280
-	0    -1   -1   0   
-$EndComp
 $Comp
 L Device:R R?
 U 1 1 5F0A1736
@@ -756,21 +724,6 @@ Wire Wire Line
 	10235 2250 10235 2725
 Text Label 6640 2200 2    50   ~ 0
 bank_2_led
-Text Label 10395 2250 3    50   ~ 0
-bank_3_led
-Wire Wire Line
-	10395 2730 10395 2250
-$Comp
-L power:GND #PWR0254
-U 1 1 5F1A348A
-P 10395 3680
-F 0 "#PWR0254" H 10395 3430 50  0001 C CNN
-F 1 "GND" H 10400 3507 50  0001 C CNN
-F 2 "" H 10395 3680 50  0001 C CNN
-F 3 "" H 10395 3680 50  0001 C CNN
-	1    10395 3680
-	1    0    0    -1  
-$EndComp
 Text Label 9350 1815 0    50   ~ 0
 bank_3_led
 Text Label 6640 2000 2    50   ~ 0

@@ -557,7 +557,7 @@ Wire Wire Line
 Connection ~ 6125 1700
 Wire Wire Line
 	6125 1700 7700 1700
-Text GLabel 8975 3400 2    20   Input ~ 0
+Text GLabel 6750 3300 0    20   Input ~ 0
 GPIO_RST_0
 Text GLabel 6750 3100 0    20   Input ~ 0
 GPIO_RST_1
@@ -671,7 +671,7 @@ F 4 "732-4990-1-ND" H 9830 3270 50  0001 C CNN "DPN"
 	1    9830 3270
 	0    -1   -1   0   
 $EndComp
-Text Label 6750 3300 2    50   ~ 0
+Text Label 8975 3400 0    50   ~ 0
 bank_0_led
 Wire Wire Line
 	9830 2720 9830 2170
