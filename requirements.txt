@@ -1,4 +1,4 @@
 docopt~=0.6.2
 RPi.GPIO~=0.7.0
-#gpiozero~=1.5.1
-#colorzero~=1.1
+smbus2~=0.3.0
+numpy~=1.9.1

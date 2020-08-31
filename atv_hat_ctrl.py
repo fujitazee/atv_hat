@@ -28,37 +28,100 @@ fan speed, and network configuration
 Usage:
 	atv_hat_ctrl.py -h
 	atv_hat_ctrl.py -g
-    atv_hat_ctrl.py -s=<new_state> ( -p=<port_number> | -l=<led_number>)
+    atv_hat_ctrl.py -s=<z> [-l=<y>]
+    atv_hat_ctrl.py -s=<z> [-p=<x>]
 
 Options:
-    -h    Print help text
-    -g    Get the state of LEDs and Ports
-    -p=<port_number> Port number to toggle state of (0-47) [default: -1]
-    -l=<led_number>  LED number to toggle state of (0-2) [default: -1]
-    -s=<new_state>   State of port/led to set (0|1) (0==off 1==on) [default: 0]
+    -h      Print help text
+    -g      Get the state of LEDs and Ports
+    -p=<x>  Port number to toggle state of (0-47) [default: -1]
+    -l=<y>  LED number to toggle state of (0-2) [default: -1]
+    -s=<z>  State of port/led to set (0|1) (0==off 1==on) [default: 0]
 
 """
 from docopt import docopt;
 import RPi.GPIO as GPIO;
-
-
-ledGpioPin = [21,19,22]; #gpio pin number on atv hat
+import numpy as np;
 
 #FIXME
 import pdb;
 
-def setLedState(ledNum, newState):
-	GPIO.setwarnings(False); #ignore re-setup of pins
-	GPIO.setmode(GPIO.BCM);
-	GPIO.setup(ledGpioPin[ledNum], GPIO.OUT)
-	GPIO.output(ledGpioPin[ledNum],newState)
+########################
+######## globals #######
+########################
+ledGpioPin  = [21,19,22]; #gpio pin number on atv hat
+iicResetPin = [26,13,27];
 
+########################
+## General functions ###
+########################
+
+#get the state of ports and leds in a state variable
 def getState():
 	ledState = [];
 	for ledPin in ledGpioPin:
 		GPIO.setup(ledPin,GPIO.OUT); #need to set up every time
 		ledState.append(GPIO.input(ledPin));
 	return ledState;
+
+########################
+##### LED functions ####
+########################
+
+#set the led state
+def setLedState(ledNum, newState):
+	GPIO.setwarnings(False); #ignore re-setup of pins
+	GPIO.setmode(GPIO.BCM);
+	GPIO.setup(ledGpioPin[ledNum], GPIO.OUT)
+	GPIO.output(ledGpioPin[ledNum],newState)
+
+########################
+####  iic functions ####
+########################
+
+"""
+The PCA9552 can be read from and written to using two commands
+When you want to read a register, write the register address to
+the device and stop, then issue a read byte command. To write
+a register write out the register address and the new data.
+"""
+#reset the target iic expander
+#def resetIICExpander():
+
+#returns iicAddress, pca552 reg offset, data, and shift posisition in register
+def lookUpIicCmd(portNum, state, pwm, pwmSel):
+	iicAddress  = [0x60,0x61,0x62]; #i2c mux 7 bit addresses
+	#corresponds portnumber to PCA9552 led number
+	pcaLedTable = [7,6,5,4,3,2,1,0,8,9,10,11,12,13,14,15];
+	lsRegOffset = 6; #offset for first led state modification reg
+
+	#1. look up i2c address
+	bankNum = portNum // 16;
+	i2CAddr = iicAddress[bankNum];
+
+	#2. look up pcaLedNum
+	ledPinNum = pcaLedTable[portNum-(bankNum*16)];
+	pcaRegAddr = lsRegOffset+(ledPinNum//4);
+
+	#3. calculate data
+	if (pwm):
+		if (pwmSel):
+			data = np.uint8(0x3);
+		else:
+			data = np.uint8(0x2);
+	else:
+		data = np.uint8(state); #state corresponds with desired data
+
+	#4. calculate shift value for mask
+	shiftVal = 2*(ledPinNum%4);
+
+	return (i2CAddr, pcaRegAddr, data, shiftVal);
+
+#reads PCA9552 register value, modifies it, and writes it back
+#def readModifyWrite(iicAddr, regAddr, data, shiftVal):
+	#maskPosition = ~(0x3<<shiftVal)
+	#mask = (data<<shiftVal)&0xFF;
+
 
 if __name__ == "__main__":
 	args = docopt(__doc__);
@@ -69,8 +132,18 @@ if __name__ == "__main__":
 		exit(-1);		
 
 	#check for led updates
-	if ((int(args["-l"]) >= 0 and int(args["-l"])) < 3):
+	if ((int(args["-l"]) >= 0) and (int(args["-l"]) < 3)):
 		setLedState(int(args["-l"]), int(args["-s"]));
+
+	if ((int(args["-p"]) >= 0) and (int(args["-p"]) < 48)):
+		#data returns as address, register offset, and mask
+		iicData = lookUpIicCmd(int(args["-p"]), int(args["-s"]), False, 0);
+		print("I2C Address:     "+hex(iicData[0]));
+		print("Register Offset: "+hex(iicData[1]));
+		print("I2C Data:        "+hex(iicData[2]));
+		print("Data Shift Val:  "+hex(iicData[3]));
+
+		#setPortState
 
 	#get state and print it
 	if (args["-g"]):
