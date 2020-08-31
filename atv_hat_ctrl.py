@@ -133,6 +133,9 @@ def readModifyWrite(iicAddr, regAddr, data, shiftVal):
 	#write data back to pca
 	bus.write_byte_data(iicAddr, regAddr, newData);
 
+#get temp
+#cat sys/class/thermal/thermal_zone0/temp | awk '{print substr($0,1,length()-3)}'
+
 if __name__ == "__main__":
 	args = docopt(__doc__);
 
