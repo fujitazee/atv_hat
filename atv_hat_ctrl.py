@@ -42,6 +42,7 @@ Options:
 from docopt import docopt;
 import RPi.GPIO as GPIO;
 import numpy as np;
+from smbus2 import SMBus;
 
 #FIXME
 import pdb;
@@ -88,7 +89,7 @@ a register write out the register address and the new data.
 #reset the target iic expander
 #def resetIICExpander():
 
-#returns iicAddress, pca552 reg offset, data, and shift posisition in register
+#returns iicAddress, pca9552 reg offset, data, and shift posisition in register
 def lookUpIicCmd(portNum, state, pwm, pwmSel):
 	iicAddress  = [0x60,0x61,0x62]; #i2c mux 7 bit addresses
 	#corresponds portnumber to PCA9552 led number
@@ -118,10 +119,19 @@ def lookUpIicCmd(portNum, state, pwm, pwmSel):
 	return (i2CAddr, pcaRegAddr, data, shiftVal);
 
 #reads PCA9552 register value, modifies it, and writes it back
-#def readModifyWrite(iicAddr, regAddr, data, shiftVal):
-	#maskPosition = ~(0x3<<shiftVal)
-	#mask = (data<<shiftVal)&0xFF;
+def readModifyWrite(iicAddr, regAddr, data, shiftVal):
+	bus = SMBus(1);
 
+	#read data from reg
+	regData = np.uint8(bus.read_byte_data(iicAddr, regAddr));
+
+	#clear bits in position
+	mask = ~np.uint8(0x3<<shiftVal);
+	clearedReg = (mask&regData);
+	newData = (clearedReg|(data)<<shiftVal);
+
+	#write data back to pca
+	bus.write_byte_data(iicAddr, regAddr, newData);
 
 if __name__ == "__main__":
 	args = docopt(__doc__);
@@ -129,21 +139,18 @@ if __name__ == "__main__":
 	#check state variable if used
 	if ((int(args["-s"])) != 0 and int(args["-s"]) != 1):
 		print("New State must be 0 or 1");
-		exit(-1);		
+		exit(-1);
 
 	#check for led updates
 	if ((int(args["-l"]) >= 0) and (int(args["-l"]) < 3)):
 		setLedState(int(args["-l"]), int(args["-s"]));
 
 	if ((int(args["-p"]) >= 0) and (int(args["-p"]) < 48)):
-		#data returns as address, register offset, and mask
+		#data returns as address, register offset, and data, and offset in register
 		iicData = lookUpIicCmd(int(args["-p"]), int(args["-s"]), False, 0);
-		print("I2C Address:     "+hex(iicData[0]));
-		print("Register Offset: "+hex(iicData[1]));
-		print("I2C Data:        "+hex(iicData[2]));
-		print("Data Shift Val:  "+hex(iicData[3]));
+		#write data new pca data
+		readModifyWrite(iicData[0], iicData[1], iicData[2], iicData[3],);
 
-		#setPortState
 
 	#get state and print it
 	if (args["-g"]):
